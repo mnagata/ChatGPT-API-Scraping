@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 
 export const getContent = async (url: string): Promise<string> => {
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: 'new',
         channel: 'chrome',
         pipe: true
     });
@@ -11,10 +11,9 @@ export const getContent = async (url: string): Promise<string> => {
     
     await page.setViewport({ width: 1280, height: 800 });
 
-    await page.goto(url, { waitUntil: "networkidle2" });
+    await page.goto(url);
 
     const content = await page.content();
-    console.log(content);
     const encoding = await page.evaluate(() => {
         return document.characterSet;
     });
@@ -24,5 +23,5 @@ export const getContent = async (url: string): Promise<string> => {
     await page.close();
     await browser.close();
 
-    return content;
+    return encodeontent.toString();
 };
