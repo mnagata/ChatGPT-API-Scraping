@@ -3,16 +3,17 @@
     "version": "1.0.0",
     "devDependencies": {
         "@types/node": "18.15.12",
-        "@types/yargs": "17.0.24",
         "@types/ramda": "0.29.0",
-        "typescript": "5.0",
-        "ts-node": "^10.9.1"
+        "@types/yargs": "17.0.24",
+        "ts-node": "^10.9.1",
+        "typescript": "5.0"
     },
     "dependencies": {
-        "openai": "^3.2.1",
-        "puppeteer": "20.2.1",
-        "yargs": "17.7.2",
+        "faiss-node": "0.1.1",
         "iconv-lite": "0.6.3",
-        "ramda": "0.29"
+        "langchain": "0.0.77",
+        "openai": "3.3.0",
+        "ramda": "0.29",
+        "yargs": "17.7.2"
     }
 }
