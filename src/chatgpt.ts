@@ -3,14 +3,14 @@ import { isNil } from 'ramda';
 
 // 初期値に役割を与える
 const chatMessage: Array<ChatCompletionRequestMessage> = [
-    { role: 'system', content: '入力されたhtml文字列からメニューの商品名と価格をcsv形式で出力してください'}
+    { role: 'system', content: '入力されたhtml文字列からメニューの商品名と価格をヘッダー付きcsvフォーマットで出力してください'}
 ];
 
 // ChatGPT API
 const chatGptAask = async (): Promise<CreateChatCompletionResponse> => {
     const response = await openai.createChatCompletion({
-        //model: 'gpt-3.5-turbo-0301',
-        model: 'gpt-4',
+        model: 'gpt-3.5-turbo-0613',
+        //model: 'gpt-4',
         messages: chatMessage
     });
 
