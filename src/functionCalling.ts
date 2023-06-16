@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi, ChatCompletionRequestMessage, CreateChatCompletionResponse } from 'openai';
 import { isNil } from 'ramda';
 
-const menuChema = {
+const menuSchema = {
     "type": "object",
     "properties": {
         "menu": {
@@ -36,7 +36,7 @@ const chatGptAask = async (): Promise<CreateChatCompletionResponse> => {
         //model: 'gpt-3.5-turbo-0613',
         messages: chatMessage,
         functions: [
-            { name: 'set_definition', parameters: menuChema }
+            { name: 'set_definition', parameters: menuSchema }
         ],
         function_call: { name: 'set_definition' }
     });

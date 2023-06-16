@@ -1,7 +1,7 @@
 import yargs from 'yargs';
 import {isNil} from 'ramda';
 import { getContent } from './puppeteer';
-import { extractMenu } from './functionClall';
+import { extractMenu } from './functionCalling';
 
 const args = yargs
     .command("* <url>", "スクレイピングするURL")
